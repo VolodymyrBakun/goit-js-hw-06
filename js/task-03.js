@@ -12,3 +12,10 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+
+const galleryEl = document.querySelector("ul")
+
+const markup = images.map((img) => `<img src="${img.url}" alt="${img.alt}" class="gallery-item">`).join("");
+console.log(markup);
+galleryEl.innerHTML = markup;
